@@ -6,10 +6,7 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await axios.post(
-      "http://localhost:8000/api/v1/engs/create-eng",
-      { name: name }
-    );
+    const data = await axios.post("/api/v1/engs/create-eng", { name: name });
 
     console.log(data);
     setName("");

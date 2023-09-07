@@ -17,12 +17,9 @@ const VerifiedEngs = () => {
 
   const handleRemove = async (id) => {
     console.log(id);
-    const { data } = await axios.put(
-      `http://localhost:8000/api/v1/engs/remove/${id}`,
-      {
-        verified: false,
-      }
-    );
+    const { data } = await axios.put(`/api/v1/engs/remove/${id}`, {
+      verified: false,
+    });
     console.log(data);
   };
 
