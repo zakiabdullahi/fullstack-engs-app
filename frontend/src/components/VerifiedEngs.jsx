@@ -5,9 +5,7 @@ const VerifiedEngs = () => {
   const [engineers, setEngineers] = useState([]);
   useEffect(() => {
     const fetchEngineers = async () => {
-      const { data } = await axios.get(
-        "http://localhost:8000/api/v1/engs/readVerified-engs"
-      );
+      const { data } = await axios.get("/api/v1/engs/readVerified-engs");
 
       console.log(data);
       setEngineers(data);
